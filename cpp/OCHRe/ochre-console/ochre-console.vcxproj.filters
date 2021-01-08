@@ -18,9 +18,15 @@
     <ClInclude Include="include\thinkgear.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ThinkgearSample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ochre-console.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThinkgearSample.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
