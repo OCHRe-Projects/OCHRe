@@ -70,8 +70,7 @@ main( void ) {
      *       them.  On Mac OS X, COM ports are named like
      *       "/dev/tty.MindSet-DevB-1".
      */
-    //comPortName = "\\\\.\\COM40";
-    comPortName = "\\\\.\\COM6";
+    comPortName = "\\\\.\\COM40";
     errCode = TG_Connect( connectionId,
                          comPortName,
                          TG_BAUD_57600,
