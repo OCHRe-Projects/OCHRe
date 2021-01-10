@@ -15,14 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\thinkgear.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ThinkgearSample.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="ochre-console.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -31,9 +23,14 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="thinkgear.dll" />
+    <ClInclude Include="include\thinkgear.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ThinkgearSample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="lib\thinkgear.lib" />
+    <None Include="thinkgear64.dll" />
   </ItemGroup>
 </Project>
