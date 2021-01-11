@@ -9,26 +9,24 @@
 #include <sstream>
 #include "include/thinkgear.h"
 
-    /* NOTE: On Windows, COM10 and higher must be preceded by \\.\, as in
-     *       "\\\\.\\COM12" (must escape backslashes in strings).
-     *       COM9 and lower do not require the \\.\, but are allowed to include them.
-     */
-std::string comSix("\\\\.\\COM6");
-int packetsRead = 0;
-int errCode = 0;
+//    /* NOTE: On Windows, COM10 and higher must be preceded by \\.\, as in
+//     *       "\\\\.\\COM12" (must escape backslashes in strings).
+//     *       COM9 and lower do not require the \\.\, but are allowed to include them.
+//     */
+//std::string comSix("\\\\.\\COM6");
+//int packetsRead = 0;
+//int errCode = 0;
+//
+//double secondsToRun = 1;
+//time_t startTime = 0;
+//time_t currTime = 0;
+//int set_filter_flag = 0;
+//int packetCount = 0;
+//
+//float rawValue = 0;
+//float attentionValue = 0;
+//float meditationValue = 0;
 
-double secondsToRun = 1;
-time_t startTime = 0;
-time_t currTime = 0;
-int set_filter_flag = 0;
-int packetCount = 0;
-
-float rawValue = 0;
-float attentionValue = 0;
-float meditationValue = 0;
-
-//static DWORD ThreadReadPacket(LPVOID lpdwThreadParam);
-//static DWORD ThreadReadPacket(LPVOID lpdwThreadParam);
 double getAvgDataValue(int, int, int);
 
 //static DWORD ThreadReadPacket(LPVOID lpdwThreadParam)
@@ -104,7 +102,7 @@ std::string timeStamp()
     std::ostringstream ss;
     gmtime_s(&currentLocalTime, &currentTime); // swap these two arguments if not using MSVC
 
-    ss << std::put_time(&currentLocalTime, "%Y-%m-%d %T") << "T" << std::setfill('0') << std::setw(3) << nowMillis << " ";
+    ss << std::put_time(&currentLocalTime, "%Y-%m-%d %T") << " " << std::setfill('0') << std::setw(3) << nowMillis << " ";
 
     return ss.str();
 }
@@ -120,23 +118,23 @@ void wait()
 
 int main(int argc, char **argv)
 {
-    ///* NOTE: On Windows, COM10 and higher must be preceded by \\.\, as in
-    // *       "\\\\.\\COM12" (must escape backslashes in strings).
-    // *       COM9 and lower do not require the \\.\, but are allowed to include them.
-    // */
-    //std::string comSix = "\\\\.\\COM6";
-    //int packetsRead = 0;
-    //int errCode = 0;
+    /* NOTE: On Windows, COM10 and higher must be preceded by \\.\, as in
+     *       "\\\\.\\COM12" (must escape backslashes in strings).
+     *       COM9 and lower do not require the \\.\, but are allowed to include them.
+     */
+    std::string comSix = "\\\\.\\COM6";
+    int packetsRead = 0;
+    int errCode = 0;
 
-    //double secondsToRun = 1;
-    //time_t startTime = 0;
-    //time_t currTime = 0;
-    //int set_filter_flag = 0;
-    //int packetCount = 0;
+    double secondsToRun = 5;
+    time_t startTime = 0;
+    time_t currTime = 0;
+    int set_filter_flag = 0;
+    int packetCount = 0;
 
-    //float rawValue = 0;
-    //float attentionValue = 0;
-    //float meditationValue = 0;
+    float rawValue = 0;
+    float attentionValue = 0;
+    float meditationValue = 0;
 
     std::cout << timeStamp() << "Stream SDK version: " << TG_GetVersion() << std::endl;
 

@@ -481,9 +481,6 @@ TG_SendByte( int connectionId, int b );
 THINKGEAR_API int
 MWM15_getFilterType( int connectionId);
 
- 
-  
-
 
 /**
  * Set the filter type with MWM15_FILTER_TYPE_50HZ or MWM15_FILTER_TYPE_60HZ.

@@ -32,5 +32,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="thinkgear64.dll" />
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
